@@ -9,6 +9,8 @@ def create_output_file(output=None):
         df.at[i.day, i.time] = i.assignee
 
     if output is None:
+        pass
+    elif output == 'print':
         print(df)
     else:
         df.to_excel(excel_writer='Rota.xlsx')
